@@ -118,6 +118,11 @@ body {
 .project .polaroid img {
     width: 250px;
     border: 1px solid rgba(189, 228, 224, 0.829);
+    transition: 0.5s -webkit-filter;
+    left: -3px;
+    top:-3px;
+     clip: rect(2px 250px 120px 2px);
+     -webkit-transform: translateZ(0px);
 }
 
 .card {
@@ -174,10 +179,11 @@ h2 {
 .project .polaroid {
     transition: 0.4s;
     position: relative;
+    overflow: hidden;
 }
 
 .project .polaroid:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .project .polaroid .project-info {
@@ -188,6 +194,16 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-user-select: none;     
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.blur-image {
+    -webkit-filter: blur(4px);
 }
 
 .project-info h6 {
@@ -255,9 +271,5 @@ h2 {
     color: white;
     box-shadow: inset 400px 0 0 0 #e55b7e;
     background-color: #e55b7e;
-}
-
-.not-display {
-    display: none;
 }
 
