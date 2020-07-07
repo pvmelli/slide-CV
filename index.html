@@ -16,9 +16,14 @@
     <div class="book">
         <div id="pages" class="pages">
           <div id="cover" class="page">
+            <div class="content">
                 <img src="./src/img/polaroid_full.png">
+            </div>
+            <div class="next-button page-change"></div>
           </div>
-          <div class="page column">
+          <div class="page row">
+            <div class="prev-button page-change"></div>
+              <div class="content">
               <div class="row justify-between">
                   <div id="img-perfil" class="polaroid-container w-1/3">
                       <div class="polaroid shadow-lg"><img src="./src/img/dummy_photo.png"></div>
@@ -61,57 +66,81 @@
                         </ul>
                     </div>
                 </div>
+              </div>
           </div>
-          <div class="page column">
+          <div class="page row">
+            <div class="content">
               <h2>Tecnologías</h2>
               <hr class="title-bottom-border title-border-right">
               <div class="bookpage-content">
                 <div class="row justify-between polaroid-group shadow-lg">
                     <div class="polaroid-single">
+                        <div class="tec-img">
                       <img src="./src/img/tec_p_01.png">
                       <strong>HTML - HTML5</strong>
+                        </div>
                     </div>
                     <div class="polaroid-single">
+                        <div class="tec-img">
                         <img src="./src/img/tec_p_02.png">
                         <strong>CSS - CSS3</strong>
                     </div>
+                    </div>
                     <div class="polaroid-single polaroid-last">
+                        <div class="tec-img">
                         <img src="./src/img/tec_p_03.png">
                         <strong>JavaScript ES6+</strong>
+                    </div>
                     </div>
                 </div>
                 <div class="row justify-between polaroid-group shadow-lg">
                     <div class="polaroid-single">
+                        <div class="tec-img">
                         <img src="./src/img/tec_p_04.png">
                         <strong>Git - Github</strong>
+                    </div>
                       </div>
                       <div class="polaroid-single">
+                        <div class="tec-img">
                           <img src="./src/img/tec_p_05.png">
                           <strong>Bootstrap</strong>
+                        </div>
                       </div>
                       <div class="polaroid-single polaroid-last">
+                        <div class="tec-img">
                           <img src="./src/img/tec_p_06.png">
                           <strong>Tailwind</strong>
+                        </div>
                       </div>
                 </div>
                 <div class="row justify-between polaroid-group shadow-lg">
                     <div class="polaroid-single">
+                        <div class="tec-img">
                         <img src="./src/img/tec_p_07.png">
                         <strong>Responsive Design</strong>
+                    </div>
                       </div>
                       <div class="polaroid-single">
+                        <div class="tec-img">
                           <img src="./src/img/tec_p_08.png">
                           <strong>Unit testing<br>(Jest)</strong>
+                        </div>
                       </div>
                       <div class="polaroid-single polaroid-last">
+                        <div class="tec-img">
                           <img src="./src/img/tec_p_09.png">
                           <strong>Integration testing<br>(Cypress)</strong>
+                        </div>
                       </div>
                 </div>
 
                 </div>
+            </div>
+            <div class="next-button page-change"></div>
               </div>
-          <div class="page column">
+          <div class="page row">
+            <div class="prev-button page-change"></div>
+            <div class="content">
             <h2>Proyectos</h2>
             <hr class="title-bottom-border title-border-right">
             <div class="bookpage-content">
@@ -162,11 +191,13 @@
                 </div>
             </div>
           </div>
+            </div>
         </div>
-          <div class="page column">
-            <div class="bookpage-content"></div>
-            <div class="column card rounded overflow-hidden shadow-lg">
-                <h3>Contacto</h3>
+          <div class="page row">
+            <div class="content">
+            <div class="bookpage-content">
+            <div id="contact" class="column card rounded overflow-hidden shadow-lg">
+                <h2>Contacto</h2>
                 <hr class="title-bottom-border">
                 <div id="socials" class="row justify-center">
                     <a class="fa fa-github-square"></a>
@@ -178,7 +209,14 @@
             <div class="card rounded overflow-hidden shadow-lg row justify-center">
                 <button id="download" class="button_slide">Descargar CV</button>
             </div>
+        </div>
+        </div>
+        <div class="next-button page-change"></div>
           </div>
+        <div class="page column">
+            <div class="prev-button page-change"></div>
+        </div>
+        </div>
           </div>
         </div>
       </div>

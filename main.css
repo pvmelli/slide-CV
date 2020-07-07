@@ -6,7 +6,6 @@ body {
 
 .book {
     height: 80%;
-    width: 50%;
 }
 
 .page {
@@ -14,22 +13,12 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    margin: 20px;
-    padding: 5% 5% 5% 10%;
 
     background: -webkit-linear-gradient(top, rgb(252, 250, 236), rgb(231, 229, 205) 100%);
     background: -moz-linear-gradient(top, rgb(252, 250, 236), rgb(231, 229, 205) 100%);
     background: -ms-linear-gradient(top, rgb(252, 250, 236), rgb(231, 229, 205) 100%);
     background: -o-linear-gradient(top, rgb(252, 250, 236), rgb(231, 229, 205) 100%);
     background: linear-gradient(top, rgb(252, 250, 236), rgb(231, 229, 205) 100%);
-}
-
-.left-page {
-    padding: 5% 10% 5% 5%;
-}
-
-.right-page {
-    padding: 5% 5% 5% 10%;
 }
 
 .row {
@@ -39,7 +28,7 @@ body {
 
 .column {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
 
 .polaroid-container {
@@ -47,7 +36,7 @@ body {
 }
 
 .polaroid {
-    border-width: 10px 10px 50px 10px;
+    border-width: 10px 10px 3vw 10px;
     border-style: solid;
     border-color: white;
     transition: 0.4s; 
@@ -63,7 +52,8 @@ body {
     background-color: white;
     margin-bottom: 4vh;
     text-align: center;
-    transition: 0.4s; 
+    transition: 0.4s;
+    width: 38vw;
 }
 
 .polaroid-group:hover {
@@ -71,7 +61,7 @@ body {
 }
 
 .polaroid-group .polaroid-single {
-    border-width: 15px 15px 15px 15px;
+    border-width: 1vw 1vw 1vw 1vw;
     border-style: solid;
     border-color: white;
     position: relative;
@@ -81,13 +71,9 @@ body {
 }
 
 .polaroid-single img {
-    width: 150px;
+    width: 140px;
     filter: sepia(0.10);
     transition: 0.5s;
-}
-
-.polaroid-single img:hover {
-    opacity: 0.5;
 }
 
 .polaroid-single strong {
@@ -116,36 +102,41 @@ body {
 }
 
 .project .polaroid img {
-    width: 250px;
+    width: 17vw;
     border: 1px solid rgba(189, 228, 224, 0.829);
     transition: 0.5s -webkit-filter;
     left: -3px;
     top:-3px;
-     clip: rect(2px 250px 120px 2px);
+     clip: rect(2px 18vw 10vw 2px);
      -webkit-transform: translateZ(0px);
 }
 
 .card {
     background-color: white;
-    padding: 5%;
-    margin: 2%;
+    padding: 4%;
+    margin: 1%;
 }
 
 .card h2 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     color: #4d9699;
 }
 
 .card h3 {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-family: 'Nunito', sans-serif;
     padding-bottom: 0.6vw;
     color: #e55b7e;
 }
 
 .card p {
+    text-align: justify;
+    font-size: 1vw;
+}
+
+.card ul {
     text-align: justify;
     font-size: 1vw;
 }
@@ -166,14 +157,11 @@ h2 {
 .title-bottom-border {
     border-top: 4px dotted #4d9699;
     box-sizing: content-box;
-}
-
-.title-border-right {
-    margin: 0 -5% 0 0;
+    margin: 10px 0px 10px 0px;
 }
 
 .bookpage-content {
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
 .project .polaroid {
@@ -203,7 +191,7 @@ h2 {
 }
 
 .blur-image {
-    -webkit-filter: blur(4px);
+    -webkit-filter: blur(2px) brightness(1.1);
 }
 
 .project-info h6 {
@@ -211,20 +199,24 @@ h2 {
     color: #e55b7e;
     font-weight: bold;
     font-size: 1.5vw;
-    text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89), 1px -1px 2px rgba(255, 255, 255, 0.89), -1px 1px 2px rgba(255, 255, 255, 0.89), 1px 1px 2px rgba(255, 255, 255, 0.89);
+    text-shadow: -1px -1px 2px white, 
+    1px -1px 2px white,
+    -1px 1px 2px white,
+    1px 1px 2px white;
 }
 
 .project-info p {
     font-size: 1vw;
     color: #4d9699;
     font-weight: bold;
+    margin-bottom: 0.5vw;
     text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89), 1px -1px 2px rgba(255, 255, 255, 0.89), -1px 1px 2px rgba(255, 255, 255, 0.89), 1px 1px 2px rgba(255, 255, 255, 0.89);
 }
 
 .project-info a {
     background-color: #e55b7e;
     color: white;
-    font-size: 0.6vw;
+    font-size: 0.8vw;
     padding: 0.5vw;
     border-radius: 5px;
     transition: 0.5s;
@@ -233,7 +225,12 @@ h2 {
 .project-info a:hover {
     background-color: white;
     color: #e55b7e;
+    border: 1px solid white;
 
+}
+
+#contact h2 {
+    color: #e55b7e;
 }
 
 #socials .fa {
@@ -241,6 +238,7 @@ h2 {
     margin: 2vw 2vw 1vw 2vw;
     transition: 0.5s;
     color: #4d9699;
+    cursor: pointer;
 }
 
 #socials .fa:hover{
@@ -273,3 +271,156 @@ h2 {
     background-color: #e55b7e;
 }
 
+/* BOOK EFFECTS CSS BELOW */
+.book {
+    transition: opacity 0.4s 0.2s;
+  }
+  .page {
+    width: 45vw;
+    height: 44vw;
+    background-color: #111111;
+    float: left;
+    margin-bottom: 1vw;
+    background: left top no-repeat;
+    background-size: cover;
+  }
+  .page:nth-child(even) {
+    clear: both;
+  }
+  .book {
+    perspective: 250vw;
+  }
+  .book .pages {
+    width: 90vw;
+    height: 45vw;
+    left: 0;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    /*box-shadow: 0 0 0 1px #e3dfd8;*/
+  }
+  .book .page {
+    float: none;
+    clear: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 45vw;
+    height: 45vw;
+    transform-origin: 0 0;
+    transition: transform 1.4s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    user-select: none;
+    background-color: rgb(252, 250, 236);
+}
+
+  .book .page:nth-child(odd) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+  }
+  .book .page:nth-child(odd):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .book .page:nth-child(even) {
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transform-origin: 100% 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    border-color: black;
+    background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+  }
+  .book .page:nth-child(even):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.grabbing {
+    transition: none;
+  }
+  .book .page.flipped:nth-child(odd) {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+  }
+  .book .page.flipped:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.flipped:nth-child(even) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+  }
+
+  .book .page.flipped:nth-child(even):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page.flipped:nth-child(even):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  *,
+  * :before,
+  *:after {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    background: #333;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    line-height: 1.5vw;
+  }
+  .page:nth-child(odd){
+    background-position: right top;
+  }
+
+  .content {
+    transform: translate(0%, 5%);
+    width: 40vw;
+    height: 44vw;
+    position: absolute;
+    top: 0;
+  }
+
+  .page-change {
+    position: absolute;
+    top: 50%;
+    width: 2vw;
+    height: 2vw;
+    transform: translate(0%, -50%);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .page-change:hover {
+      opacity: 0.5;
+  }
+
+  .prev-button {
+      left: 0;
+
+        border-top: 1em solid transparent;
+        border-bottom: 1em solid transparent; 
+        
+        border-right: 1em solid #4d9699;
+  }
+
+  .next-button {
+      right: 0;
+      border-top: 1em solid transparent;
+      border-bottom: 1em solid transparent;
+      border-left: 1em solid #4d9699;
+  }
