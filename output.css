@@ -1,0 +1,373 @@
+@charset "UTF-8";
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  color: #0a0b24;
+  background: #333;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  line-height: 1.5vw;
+}
+
+.book {
+  height: 80%;
+  transition: opacity 0.4s 0.2s;
+  perspective: 250vw;
+}
+.book *,
+.book * :before,
+.book *:after {
+  box-sizing: border-box;
+}
+.book .pages {
+  width: 90vw;
+  height: 45vw;
+  left: 0;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  /*box-shadow: 0 0 0 1px #e3dfd8;*/
+}
+.book .page {
+  background-color: #fcfaec;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: -webkit-linear-gradient(top, #fcfaec, #e7e5cd 100%);
+  background: -moz-linear-gradient(top, #fcfaec, #e7e5cd 100%);
+  background: -ms-linear-gradient(top, #fcfaec, #e7e5cd 100%);
+  background: -o-linear-gradient(top, #fcfaec, #e7e5cd 100%);
+  background: linear-gradient(top, #fcfaec, #e7e5cd 100%);
+  width: 45vw;
+  float: left;
+  margin-bottom: 1vw;
+  background: left top no-repeat;
+  background-size: cover;
+}
+.book .page h2 {
+  font-size: 2vw;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #e55b7e;
+}
+.book .page .title-bottom-border {
+  border-top: 4px dotted #4d9699;
+  box-sizing: content-box;
+  margin: 10px 0px 10px 0px;
+}
+.book .page .bookpage-content {
+  margin-top: 1vw;
+}
+.book .page .content {
+  transform: translate(0%, 5%);
+  width: 40vw;
+  height: 44vw;
+  position: absolute;
+  top: 0;
+}
+.book .page .card {
+  background-color: white;
+  padding: 4%;
+  margin: 1%;
+}
+.book .page .card h2 {
+  font-size: 1.7vw;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #4d9699;
+}
+.book .page .card h3 {
+  font-size: 1.3vw;
+  font-family: "Nunito", sans-serif;
+  padding-bottom: 0.6vw;
+  color: #e55b7e;
+}
+.book .page .card p {
+  text-align: justify;
+  font-size: 1vw;
+}
+.book .page .card ul {
+  text-align: justify;
+  font-size: 1vw;
+}
+.book .page .card li:before {
+  content: "• ";
+  font-size: 1.3vw;
+  color: #e55b7e;
+}
+.book .page .page-change {
+  position: absolute;
+  top: 50%;
+  width: 2vw;
+  height: 2vw;
+  transform: translate(0%, -50%);
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: -1;
+}
+.book .page .page-change:hover {
+  opacity: 0.5;
+}
+.book .page .prev-button {
+  left: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-right: 1em solid #4d9699;
+}
+.book .page .next-button {
+  right: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid #4d9699;
+}
+.book .page:nth-child(even) {
+  clear: both;
+}
+.book .page {
+  float: none;
+  clear: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 45vw;
+  height: 45vw;
+  transform-origin: 0 0;
+  transition: transform 1.4s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  user-select: none;
+  background-color: #fcfaec;
+}
+.book .page:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+  right: 0;
+  border-radius: 0 4px 4px 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 10%);
+  background-position: right top;
+}
+.book .page:nth-child(odd):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+.book .page:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0);
+}
+.book .page:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+  border-color: black;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 10%);
+}
+.book .page:nth-child(even):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.book .page.flipped:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(-180deg);
+}
+.book .page.flipped:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.book .page.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+.book .page.flipped:nth-child(even):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+.book .page.flipped:nth-child(even):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.polaroid-container {
+  margin: 2%;
+}
+.polaroid-container .polaroid {
+  border-width: 10px 10px 3vw 10px;
+  border-style: solid;
+  border-color: white;
+  transition: 0.4s;
+}
+.polaroid-container .polaroid:hover {
+  transform: scale(1.03);
+}
+
+.polaroid-group {
+  justify-content: center;
+  white-space: nowrap;
+  background-color: white;
+  margin-bottom: 4vh;
+  text-align: center;
+  transition: 0.4s;
+  width: 38vw;
+}
+.polaroid-group .polaroid-single {
+  border-width: 1vw 1vw 1vw 1vw;
+  border-style: solid;
+  border-color: white;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+.polaroid-group .polaroid-single img {
+  width: 140px;
+  filter: sepia(0.1);
+  transition: 0.5s;
+}
+.polaroid-group .polaroid-single strong {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 1vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89), 1px -1px 2px rgba(255, 255, 255, 0.89), -1px 1px 2px rgba(255, 255, 255, 0.89), 1px 1px 2px rgba(255, 255, 255, 0.89);
+}
+.polaroid-group .polaroid-last {
+  border-width: 15px 60px 15px 15px;
+  border-style: solid;
+  border-color: white;
+}
+.polaroid-group:hover {
+  transform: scale(1.03);
+}
+
+.project .polaroid {
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.project .polaroid img {
+  width: 17vw;
+  border: 1px solid rgba(189, 228, 224, 0.829);
+  transition: 0.5s -webkit-filter;
+  left: -3px;
+  top: -3px;
+  clip: rect(2px 18vw 10vw 2px);
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.project .polaroid img .blur-image {
+  -webkit-filter: blur(2px) brightness(1.1);
+  filter: blur(2px) brightness(1.1);
+}
+.project .polaroid .project-info {
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.project .polaroid .project-info h6 {
+  font-family: "Nunito", sans-serif;
+  color: #e55b7e;
+  font-weight: bold;
+  font-size: 1.5vw;
+  text-shadow: -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white, 1px 1px 2px white;
+}
+.project .polaroid .project-info p {
+  font-size: 1vw;
+  color: #4d9699;
+  font-weight: bold;
+  margin-bottom: 0.5vw;
+  text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89), 1px -1px 2px rgba(255, 255, 255, 0.89), -1px 1px 2px rgba(255, 255, 255, 0.89), 1px 1px 2px rgba(255, 255, 255, 0.89);
+}
+.project .polaroid .project-info a {
+  background-color: #e55b7e;
+  color: white;
+  font-size: 0.8vw;
+  padding: 0.5vw;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.project .polaroid .project-info a:hover {
+  background-color: white;
+  color: #e55b7e;
+  border: 1px solid white;
+}
+.project .polaroid:hover {
+  transform: scale(1.1);
+}
+
+#contact h2 {
+  color: #e55b7e;
+}
+#contact #socials .fa {
+  font-size: 3vw;
+  margin: 2vw 2vw 1vw 2vw;
+  transition: 0.5s;
+  color: #4d9699;
+  cursor: pointer;
+}
+#contact #socials .fa:hover {
+  color: #e55b7e;
+  transform: scale(1.3);
+}
+
+#download {
+  padding: 1vw;
+  border-radius: 20px;
+  font-weight: bold;
+  font-weight: 2vw;
+}
+
+.button_slide {
+  color: #4d9699;
+  border: 2px solid #e55b7e;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #e55b7e;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+.button_slide:hover {
+  color: white;
+  box-shadow: inset 400px 0 0 0 #e55b7e;
+  background-color: #e55b7e;
+}
+
+/* 
+
+.polaroid-single strong {
+    ----------------------- background-color: rgb(231, 229, 229);
+    border-radius: 5px;
+    padding: 0.2vw 0.5vw 0.2vw 0.5vw;
+    opacity: 0.8; ----------
+
+}
+ */
+
+/*# sourceMappingURL=output.css.map */
