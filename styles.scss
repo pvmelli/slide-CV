@@ -1,0 +1,394 @@
+$darkblue: #0a0b24;
+$bglightblue: #78d5d8;
+$bgpink: #e77894;
+$lightblue: #49afb3;
+$pink: #e55b7e;
+$dirtywhite: rgb(231, 229, 205);
+$titlefont: 'Nunito', sans-serif;
+$paragraphfont: 'Quicksand', sans-serif;
+
+body {
+    font-family: $paragraphfont;
+    color: $darkblue;
+
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-items: center;
+    }
+    
+    .column {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .button_slide {
+        color: $lightblue;
+        border: 0.2vw solid $pink;
+        display: inline-block;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 $pink;
+        -webkit-transition: ease-out 0.5s;
+        -moz-transition: ease-out 0.5s;
+        transition: ease-out 0.5s;
+
+        &:hover {
+            color: white;
+            box-shadow: inset 400px 0 0 0 $pink;
+            background-color: $pink;
+        }
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: white;
+    height: 5vw;
+    width: 100%;
+    padding: 1vw 3vw;
+    border-bottom: 1px solid $pink;
+    z-index: 1;
+
+    #header-links {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: $titlefont;
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: $pink;
+
+        a{
+            transition: 0.5s;
+            &:hover {
+                color: $lightblue;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    #download-option {
+        button {
+            padding: 0.5vw 1vw;
+            border-radius: 20px;
+            font-weight: bold;
+            font-weight: 2vw;
+            font-size: 1.5vw;
+        }
+    }
+}
+
+#page-content {
+    margin-top: 5vw;
+    display: flex;
+    position: relative;
+
+    .content-change {
+        width: 5%;
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+
+        i {
+            position: fixed;
+            top: 50%;
+            transition: 0.5s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    #pages {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 90%;
+        max-width: 100%;
+
+        .page {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            padding: 0 4vw;
+
+            > div {
+                margin: 2vw 1vw;
+            }
+
+            .polaroid-container {
+
+                .polaroid {
+                    border-width: 1vw 1vw 4vw 1vw;
+                    border-style: solid;
+                    border-color: white;
+                    border-radius: 2px;
+                    transition: 0.4s; 
+    
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+                }
+            }
+
+            .project {
+                margin: 2%;
+                border-radius: 2px;
+
+                .polaroid {
+                    transition: 0.4s;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                img {
+                    width: 25vw;
+                    border: 1px solid rgb(206, 205, 205);
+                    transition: 0.5s -webkit-filter;
+                    left: -3px;
+                    top:-3px;
+                     clip: rect(3px 25vw 15vw 3px);
+                     -webkit-transform: translateZ(0px);
+                     transform: translateZ(0px);
+                }
+
+                .project-info {
+                    width: 100%;
+                    position: absolute;
+                    justify-content: center;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    opacity: 0;
+                    transition: 0.5s;
+                    -webkit-user-select: none;     
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+                    h6 {
+                        font-family: $titlefont;
+                        color: $pink;
+                        font-weight: bold;
+                        font-size: 2vw;
+                        text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89),
+                        1px -1px 2px rgba(255, 255, 255, 0.89),
+                        -1px 1px 2px rgba(255, 255, 255, 0.89),
+                        1px 1px 2px rgba(255, 255, 255, 0.89);
+                    }
+                    p {
+                        font-size: 1.5vw;
+                        color: $lightblue;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-bottom: 1vw;
+                        text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89),
+                        1px -1px 2px rgba(255, 255, 255, 0.89),
+                        -1px 1px 2px rgba(255, 255, 255, 0.89),
+                        1px 1px 2px rgba(255, 255, 255, 0.89);
+                    }
+
+                    a {
+                        background-color: $pink;
+                        color: white;
+                        font-size: 1vw;
+                        padding: 0.5vw;
+                        border-radius: 5px;
+                        transition: 0.5s;
+
+                        &:hover {
+                            background-color: white;
+                            color: #e55b7e;
+                        }
+                    }
+                }
+
+                .blur-image {
+                    -webkit-filter: blur(4px);
+                    filter: blur(4px);
+                }
+
+                &:nth-of-type(odd) {
+                    border: 1px solid $bglightblue;
+                }
+
+                &:nth-of-type(even) {
+                    border: 1px solid $bgpink;
+                    
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .section-separator {
+                border-bottom: 0.9vw dotted white;
+                border-top: none;
+                margin: 0 -3.8vw;
+            }
+
+            .card {
+                background-color: white;
+                padding: 3%;
+
+                .title-bottom-border {
+                    border-top: 0.4vw dotted $pink;
+                    box-sizing: content-box;
+                }
+
+                h2 {
+                    font-size: 2.5vw;
+                    font-family: $titlefont;
+                    font-weight: bold;
+                    color: $lightblue;
+                }
+
+                h3 {
+                    font-size: 1.7vw;
+                    font-family: $titlefont;
+                    padding-bottom: 0.6vw;
+                    color: $pink;
+                }
+
+                p {
+                    text-align: justify;
+                    font-size: 1.3vw;
+                }
+
+                a {
+                    color: $lightblue;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: $pink;
+                    }
+                }
+
+                ul {
+                    font-size: 1.3vw;
+
+                    li {
+
+                        &:before {
+                            content: "• "; 
+                            font-size: 1.3vw;
+                            color: $pink;
+                        }
+                    }
+                }
+
+                .fa {
+                    font-size: 4vw;
+                    margin: 2vw 2vw 1vw 2vw;
+                    transition: 0.5s;
+                    color: $lightblue;
+
+                    &:hover {
+                        color: $pink;
+                        transform: scale(1.3);
+                    }
+                }
+
+                .bookpage-content {
+                    margin-top: 2vw;
+                }
+
+                .polaroid-group {
+                    justify-content: center;
+                    align-items: center;
+                    white-space: nowrap;
+                    background-color: white;
+                    text-align: center;
+                    transition: 0.4s;
+                    width: 57vw;
+                    border-radius: 2px;
+                    margin: 4vh auto;
+                    
+
+                    .polaroid-single {
+                        border-width: 2vw 1vw 2vw 1vw;
+                        border-style: solid;
+                        border-color: white;
+                        position: relative;
+                        font-family: $titlefont;
+                        font-size: 1.5vw;
+                        font-weight: bold;
+                    }
+
+                    .polaroid-last {
+                        border-width: 2vw 6vw 2vw 1vw;
+                        border-style: solid;
+                        border-color: white;
+                    }
+
+                    img {
+                        width: 15vw;
+                        filter: sepia(0.10);
+                        transition: 0.5s;
+                        border: 1px solid rgb(206, 205, 205);
+
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+
+                    strong {
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        position: absolute;
+                        -webkit-user-select: none;     
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.89),
+                        1px -1px 2px rgba(255, 255, 255, 0.89),
+                        -1px 1px 2px rgba(255, 255, 255, 0.89),
+                        1px 1px 2px rgba(255, 255, 255, 0.89);
+                    }
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+
+                    &:nth-of-type(odd) {
+                        border: 1px solid $bglightblue;
+                    }
+
+                    &:nth-of-type(even) {
+                        border: 1px solid $bgpink;
+                        
+                    }
+                }
+            }
+
+            &:nth-child(even){
+                background-color: $bgpink;
+            }
+
+            &:nth-child(odd){
+                background-color: $bglightblue;
+            }
+
+        }
+        .not-display{
+            display: none;
+        }
+    }
+}
+
+
+

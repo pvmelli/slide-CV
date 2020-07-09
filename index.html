@@ -9,21 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     
 </head>
 <body>
-    <div class="book">
+  <header class="header fixed">
+    <div id="header-links">
+      <a>Sobre mí</a>
+      <a>Proyectos</a>
+      <a>Contacto</a>
+    </div>
+    <div id="download-option">
+      <button id="download" class="button_slide">Descargar CV</button>
+    </div>
+  </header>
+    <div id="page-content" class="book">
+      <div class="content-change prev-page">
+        <i class="fa fa-chevron-left"></i>
+      </div>
         <div id="pages" class="pages">
-          <div id="cover" class="page">
-                <img src="./src/img/polaroid_full.png">
-          </div>
           <div class="page column">
-              <div class="row justify-between">
-                  <div id="img-perfil" class="polaroid-container w-1/3">
-                      <div class="polaroid shadow-lg"><img src="./src/img/dummy_photo.png"></div>
+                <div class="row justify-between">
+                  <div id="img-perfil" class="polaroid-container w-1/4">
+                      <div class="polaroid shadow-lg"><img src="./src/img/foto.png"></div>
                   </div>
-                  <div id="presentation" class="card rounded overflow-hidden shadow-lg w-7/12">
+                  <div id="presentation" class="card rounded overflow-hidden shadow-lg w-8/12">
                       <h2>Paula Melli</h2>
                       <h3>Frontend Developer Jr.</h3>
                       <p>Aprendiz de desarrollo y diseño de páginas web radicada en Buenos Aires, Argentina.
@@ -31,9 +41,10 @@
                         Atenta al surgimiento de nuevas tecnologías y desafíos.
                         </p>
                   </div>
-              </div>
-              <div class="row justify-between">
-                <div class="card rounded overflow-hidden shadow-lg w-7/12">
+                </div>
+                <hr class="section-separator">
+                <div class="row justify-between">
+                <div class="card rounded shadow-lg w-7/12">
                     <h2>Experiencia</h2>
                     <ul>
                         <li>
@@ -41,16 +52,16 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card rounded overflow-hidden shadow-lg w-1/3">
+                <div class="card rounded shadow-lg w-1/3">
                     <h2>Idiomas</h2>
                     <ul>
                         <li>Español: nativo</li>
-                        <li>Inglés: avanzado</li>
+                        <li>Inglés: avanzado (escrito) / intermedio (oral)</li>
                     </ul>
                 </div>
                 </div>
-                <div class="column">
-                    <div class="card rounded overflow-hidden shadow-lg">
+                <div class="column justify-center">
+                    <div class="card rounded  shadow-lg">
                         <h2>Formación</h2>
                         <ul>
                             <li>Clases de Desarrollo Web (<a href="https://argentinaprograma.com/codigo-de-conducta" target="_blank">Proyecto r/Argentina Programa</a>)</li>
@@ -61,69 +72,74 @@
                         </ul>
                     </div>
                 </div>
-          </div>
-          <div class="page column">
-              <h2>Tecnologías</h2>
-              <hr class="title-bottom-border title-border-right">
-              <div class="bookpage-content">
-                <div class="row justify-between polaroid-group shadow-lg">
-                    <div class="polaroid-single">
-                      <img src="./src/img/tec_p_01.png">
-                      <strong>HTML - HTML5</strong>
+                <hr class="section-separator">
+                <div class="card rounded overflow-hidden shadow-lg justify-center">
+                  <h2>Tecnologías</h2>
+                  <hr class="title-bottom-border title-border-right">
+                  <div class="bookpage-content">
+                    <div class="row justify-between polaroid-group shadow-lg">
+                        <div class="polaroid-single">
+                          <img src="./src/img/tec_p_01.png">
+                          <strong>HTML - HTML5</strong>
+                        </div>
+                        <div class="polaroid-single">
+                            <img src="./src/img/tec_p_02.png">
+                            <strong>CSS - CSS3</strong>
+                        </div>
+                        <div class="polaroid-single polaroid-last">
+                            <img src="./src/img/tec_p_03.png">
+                            <strong>JavaScript ES6+</strong>
+                        </div>
                     </div>
-                    <div class="polaroid-single">
-                        <img src="./src/img/tec_p_02.png">
-                        <strong>CSS - CSS3</strong>
+                    <div class="row justify-between polaroid-group shadow-lg">
+                        <div class="polaroid-single">
+                            <img src="./src/img/tec_p_04.png">
+                            <strong>Git - Github</strong>
+                          </div>
+                          <div class="polaroid-single">
+                              <img src="./src/img/tec_p_05.png">
+                              <strong>Bootstrap</strong>
+                          </div>
+                          <div class="polaroid-single polaroid-last">
+                              <img src="./src/img/tec_p_06.png">
+                              <strong>Tailwind</strong>
+                          </div>
                     </div>
-                    <div class="polaroid-single polaroid-last">
-                        <img src="./src/img/tec_p_03.png">
-                        <strong>JavaScript ES6+</strong>
+                    <div class="row justify-between polaroid-group shadow-lg">
+                        <div class="polaroid-single">
+                            <img src="./src/img/tec_p_07.png">
+                            <strong>Responsive Design</strong>
+                          </div>
+                          <div class="polaroid-single">
+                              <img src="./src/img/tec_p_08.png">
+                              <strong>Unit testing<br>(Jest)</strong>
+                          </div>
+                          <div class="polaroid-single polaroid-last">
+                              <img src="./src/img/tec_p_09.png">
+                              <strong>Integration testing<br>(Cypress)</strong>
+                          </div>
                     </div>
+                   </div>
                 </div>
-                <div class="row justify-between polaroid-group shadow-lg">
-                    <div class="polaroid-single">
-                        <img src="./src/img/tec_p_04.png">
-                        <strong>Git - Github</strong>
-                      </div>
-                      <div class="polaroid-single">
-                          <img src="./src/img/tec_p_05.png">
-                          <strong>Bootstrap</strong>
-                      </div>
-                      <div class="polaroid-single polaroid-last">
-                          <img src="./src/img/tec_p_06.png">
-                          <strong>Tailwind</strong>
-                      </div>
-                </div>
-                <div class="row justify-between polaroid-group shadow-lg">
-                    <div class="polaroid-single">
-                        <img src="./src/img/tec_p_07.png">
-                        <strong>Responsive Design</strong>
-                      </div>
-                      <div class="polaroid-single">
-                          <img src="./src/img/tec_p_08.png">
-                          <strong>Unit testing<br>(Jest)</strong>
-                      </div>
-                      <div class="polaroid-single polaroid-last">
-                          <img src="./src/img/tec_p_09.png">
-                          <strong>Integration testing<br>(Cypress)</strong>
-                      </div>
-                </div>
+          <div class="page column not-display">
+
 
                 </div>
               </div>
-          <div class="page column">
+          <div class="page column not-display">
+            <div class="card rounded overflow-hidden shadow-lg">
             <h2>Proyectos</h2>
             <hr class="title-bottom-border title-border-right">
             <div class="bookpage-content">
-            <div class="row projects-container">
+            <div class="row projects-container justify-center">
                 <div class="project polaroid-container polaroid-flip">
                     <div class="project-polaroid polaroid shadow-lg project-part">
-                        <img class="project-image project-part" src="./src/img/project_01.png">
-                        <div class="project-info project-part">
-                        <h6 class="project-part">Exchange Rates</h6>
-                        <p class="project-part">Conversor de divisas</p>
-                        <a class="project-part" href="https://pvmelli.github.io/Exchange-rates/" target="_blank">Live Demo</a>
-                        <a class="project-part" href="https://github.com/pvmelli/Exchange-rates" target="_blank">Ver repositorio</a>
+                        <img class="project-image" src="./src/img/project_01.png">
+                        <div class="project-info">
+                        <h6>Exchange Rates</h6>
+                        <p>Conversor de divisas</p>
+                        <a href="https://pvmelli.github.io/Exchange-rates/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/pvmelli/Exchange-rates" target="_blank">Ver repositorio</a>
                         </div>
                     </div>
                 </div>
@@ -163,10 +179,10 @@
             </div>
           </div>
         </div>
-          <div class="page column">
-            <div class="bookpage-content"></div>
+        </div>
+          <div class="page column not-display">
             <div class="column card rounded overflow-hidden shadow-lg">
-                <h3>Contacto</h3>
+                <h2>Contacto</h2>
                 <hr class="title-bottom-border">
                 <div id="socials" class="row justify-center">
                     <a class="fa fa-github-square"></a>
@@ -175,13 +191,13 @@
                     <a class="fa fa-linkedin-square"></a>
                 </div>
             </div>
-            <div class="card rounded overflow-hidden shadow-lg row justify-center">
-                <button id="download" class="button_slide">Descargar CV</button>
-            </div>
           </div>
           </div>
+        <div class="content-change next-page">
+          <i class="fa fa-chevron-right"></i>
         </div>
       </div>
+  <footer class="footer fixed"></footer>
 
 
       <script type='module' src='main.js'></script>
