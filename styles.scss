@@ -77,7 +77,7 @@ header {
             border-radius: 20px;
             font-weight: bold;
             font-weight: 2vw;
-            font-size: 1.5vw;
+            font-size: 1.4vw;
         }
     }
 }
@@ -339,10 +339,6 @@ header {
                         filter: sepia(0.10);
                         transition: 0.5s;
                         border: 1px solid rgb(206, 205, 205);
-
-                        &:hover {
-                            opacity: 0.5;
-                        }
                     }
 
                     strong {

@@ -62,7 +62,7 @@ header #download-option button {
   border-radius: 20px;
   font-weight: bold;
   font-weight: 2vw;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 
 #page-content {
@@ -277,9 +277,6 @@ header #download-option button {
   filter: sepia(0.1);
   transition: 0.5s;
   border: 1px solid #cecdcd;
-}
-#page-content #pages .page .card .polaroid-group img:hover {
-  opacity: 0.5;
 }
 #page-content #pages .page .card .polaroid-group strong {
   top: 50%;
