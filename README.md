@@ -1,2 +1,2 @@
-# booklet-CV
+# slide-CV
  
