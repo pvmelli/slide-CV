@@ -1,4 +1,54 @@
 @charset "UTF-8";
+.slide-right {
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: slide-right 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+.slide-left {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: slide-left 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
 body {
   font-family: "Quicksand", sans-serif;
   color: #0a0b24;
@@ -69,6 +119,7 @@ header #download-option button {
   margin-top: 5vw;
   display: flex;
   position: relative;
+  background-color: #78d5d8;
 }
 #page-content .content-change {
   width: 5%;
@@ -84,6 +135,9 @@ header #download-option button {
 #page-content .content-change i:hover {
   opacity: 0.7;
 }
+#page-content .content-change i:active {
+  transform: scale(0.7);
+}
 #page-content #pages {
   position: relative;
   display: flex;
@@ -92,7 +146,6 @@ header #download-option button {
   align-items: center;
   margin: auto;
   width: 90%;
-  max-width: 100%;
 }
 #page-content #pages .page {
   position: absolute;
