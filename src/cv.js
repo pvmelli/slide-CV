@@ -1,6 +1,6 @@
 import {showProjectDetails, hideProjectDetails} from './ui/project-page.js';
 import {decreaseOpacity, increaseOpacity} from './ui/about-page.js';
-import {manageSlideshow} from './ui/slideshow.js';
+import {manageSlideshow, manageDirectSlideshow} from './ui/slideshow.js';
 
 export function initialize() {
     const projects = document.querySelectorAll('.project-polaroid');
@@ -18,4 +18,5 @@ export function initialize() {
     });
 
     manageSlideshow();
+    manageDirectSlideshow();
 };
