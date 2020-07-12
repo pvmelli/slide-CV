@@ -9,6 +9,29 @@ export function manageSlideshow() {
     showSlides(slideIndex, setBGColor, 1);
 }
 
+export function manageDirectSlideshow() {
+  const $aboutLink = document.querySelector('#about-link');
+  $aboutLink.addEventListener('click', () => {directDiv(1)});
+
+  const $projectLink = document.querySelector('#projects-link');
+  $projectLink.addEventListener('click', () => {directDiv(2)});
+
+  const $contactLink = document.querySelector('#contact-link');
+  $contactLink.addEventListener('click', () => {directDiv(3)});
+}
+
+function directDiv(n) {
+  const newIndex = n;
+  
+  if(newIndex > slideIndex){
+    slideIndex = n;
+    showSlides(newIndex, setBGColor, 1);
+  } else {
+    slideIndex = n;
+    showSlides(newIndex, setBGColor, -1);
+  };
+};
+
 function plusDivs(n) {
   const newIndex = slideIndex += n;
   showSlides(newIndex, setBGColor, n);
