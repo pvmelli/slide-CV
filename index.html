@@ -22,6 +22,7 @@
     <div id="download-option">
       <button id="download" class="button_slide"><a href="./src/downloadable_content/Paula-Melli_DEV_2020.pdf" download>Descargar CV</a></button>
     </div>
+    <div class="swipe-bar mob" style="left:10vw;" id="swipe-bar"></div>
   </header>
     <div id="page-content" class="book">
       <div class="content-change prev-page">
@@ -30,16 +31,17 @@
         <div id="pages" class="pages">
           <div class="page column">
                 <div class="row justify-between">
-                  <div id="img-perfil" class="polaroid-container w-1/4">
+                  <div id="img-perfil" class="polaroid-container w-1/4 hidden md:block">
                       <div class="polaroid shadow-lg"><img src="./src/img/foto.png"></div>
                   </div>
-                  <div id="presentation" class="card rounded overflow-hidden shadow-lg w-8/12">
+                  <div id="presentation" class="card rounded overflow-hidden shadow-lg w-100 md:w-8/12">
                       <h2>Paula Melli</h2>
                       <h3>Frontend Developer Jr.</h3>
                       <p>Aprendiz de desarrollo y diseño de páginas web radicada en Buenos Aires, Argentina.
                         Estudiando de manera autodidacta y en grupo, en busca de crecer y desenvolverme en el rubro.
                         Atenta al surgimiento de nuevas tecnologías y desafíos.
-                        </p>
+                      </p>
+                      <button id="mob-download" class="mob"><a href="./src/downloadable_content/Paula-Melli_DEV_2020.pdf" download>Descargar CV</a></button>
                   </div>
                 </div>
                 <hr class="section-separator">

@@ -32,7 +32,7 @@ function directDiv(n) {
   };
 };
 
-function plusDivs(n) {
+export function plusDivs(n) {
   const newIndex = slideIndex += n;
   showSlides(newIndex, setBGColor, n);
 };
