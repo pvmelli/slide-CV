@@ -429,27 +429,28 @@ header #swipe-bar {
   padding: 0vw;
   border-radius: 0 0.5vw 0 0;
 }
-#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container i {
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-icons {
   font-size: 2vw;
 }
-#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div {
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-divs {
   display: flex;
   flex-flow: row nowrap;
   word-break: break-all;
 }
-#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div p {
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-divs .contact-info {
   font-size: 1vw;
   line-height: 2vw;
 }
-#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div p a {
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-divs .contact-info a {
   color: #e55b7e;
 }
-#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div p a:hover {
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-divs .contact-info a:hover {
   color: #0a0b24;
 }
 #page-content #pages .page .card .form-container .upper-form .qr-container img {
   max-width: 40%;
   height: auto;
+  margin-bottom: 5vw;
 }
 #page-content #pages .page .card .form-container .form-footer {
   background: #78d5d8;
@@ -637,19 +638,44 @@ header #swipe-bar {
     font-size: calc(0.6em + 0.5vw);
     font-weight: lighter;
   }
+  #page-content #pages .page .card .form-container .upper-form .qr-container {
+    width: 100%;
+  }
+  #page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-icons {
+    font-size: calc(0.6em + 2vw);
+  }
+  #page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-divs {
+    display: flex;
+    flex-flow: row nowrap;
+    word-break: break-all;
+  }
+  #page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container .contact-divs .contact-info {
+    font-size: calc(0.6em + 0.5vw);
+    line-height: calc(0.6em + 2vw);
+  }
+  #page-content #pages .page .card .form-container .upper-form .qr-container img {
+    margin-bottom: 7vw;
+  }
   #page-content #pages .page .card .form-container .form-footer #socials .fa {
     font-size: calc(1em + 1vw);
   }
-  #page-content #pages .page .card #mob-download {
+  #page-content #pages .page .card div #mob-download {
     padding: calc(0.5em + 0.5vw);
     margin: calc(0.5em + 0.5vw) 0;
     border-radius: 5%;
     background-color: #e77894;
     font-size: calc(0.8em + 0.2vw);
     font-weight: bolder;
+    margin: 0 auto;
   }
-  #page-content #pages .page .card #mob-download a {
+  #page-content #pages .page .card div #mob-download a {
     color: white;
+  }
+  #page-content #pages .page #presentation i {
+    font-size: 14vw;
+  }
+  #page-content #pages .page #presentation iconify-icon {
+    font-size: 14vw;
   }
   #page-content #pages .page .project img {
     width: 60vw;

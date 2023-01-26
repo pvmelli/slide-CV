@@ -500,16 +500,16 @@ header {
                             border-radius: 0 0.5vw 0 0;
 
                             .contact-means-container{
-                                i {
+                                .contact-icons {
                                     font-size: 2vw;
                                 }
-                                div{
+                                .contact-divs {
                                     display:flex;
                                     flex-flow: row nowrap;
                                     word-break:break-all;
                                 
                                     
-                                    p {
+                                    .contact-info {
                                         font-size: 1vw;
                                         line-height: 2vw;
                                         a {
@@ -526,6 +526,7 @@ header {
                             img {
                                 max-width: 40%;
                                 height: auto;
+                                margin-bottom: 5vw;
                             }
                         }
                     }
@@ -713,6 +714,7 @@ header {
 
         #pages {
             .page{
+
                 .card {
                     flex-flow: column nowrap;
 
@@ -766,6 +768,31 @@ header {
                                     font-weight: lighter;
                                 }
                             }
+
+                            .qr-container {
+                                width: 100%;
+
+                                .contact-means-container{
+                                    .contact-icons {
+                                        font-size: calc(0.6em + 2vw);
+                                    }
+                                    .contact-divs {
+                                        display:flex;
+                                        flex-flow: row nowrap;
+                                        word-break:break-all;
+                                    
+                                        
+                                        .contact-info {
+                                            font-size: calc(0.6em + 0.5vw);
+                                            line-height: calc(0.6em + 2vw);
+                                        }
+                                    }
+                                }
+
+                                img {
+                                    margin-bottom: 7vw;
+                                }
+                            }
                             
                         }
 
@@ -779,17 +806,30 @@ header {
                         }
                     }
 
-                    #mob-download {
+                    div{
+
+                        #mob-download {
                         padding: calc(0.5em + 0.5vw);
                         margin: calc(0.5em + 0.5vw) 0;
                         border-radius: 5%;
                         background-color: $bgpink;                        
                         font-size: calc(0.8em + 0.2vw);
                         font-weight: bolder;
+                        margin: 0 auto;
 
-                        a {
+                            a {
                             color: white;
+                            }
                         }
+                    }
+                }
+
+                #presentation{
+                    i {
+                        font-size: 14vw;
+                    }
+                    iconify-icon {
+                        font-size: 14vw;
                     }
                 }
 
