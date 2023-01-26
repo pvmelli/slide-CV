@@ -237,6 +237,16 @@ header #swipe-bar {
 #page-content #pages .page > div {
   margin: 2vw 1vw;
 }
+#page-content #pages .page #presentation i {
+  font-size: 4vw;
+}
+#page-content #pages .page #presentation iconify-icon {
+  font-size: 4vw;
+}
+#page-content #pages .page #img-perfil {
+  border-radius: 50%;
+  width: 80%;
+}
 #page-content #pages .page .polaroid-container .polaroid {
   border-width: 1vw 1vw 4vw 1vw;
   border-style: solid;
@@ -258,7 +268,7 @@ header #swipe-bar {
 }
 #page-content #pages .page .project img {
   width: 25vw;
-  border: 1px solid #cecdcd;
+  border: 1px solid rgb(206, 205, 205);
   transition: 0.5s -webkit-filter;
   left: -3px;
   top: -3px;
@@ -410,13 +420,32 @@ header #swipe-bar {
   animation: heartbeat 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite both;
 }
 #page-content #pages .page .card .form-container .upper-form .qr-container {
-  background-color: #c1f0f1ef;
+  background-color: rgba(193, 240, 241, 0.937254902);
   width: 50%;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding: 2vw;
+  padding: 0vw;
   border-radius: 0 0.5vw 0 0;
+}
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container i {
+  font-size: 2vw;
+}
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div {
+  display: flex;
+  flex-flow: row nowrap;
+  word-break: break-all;
+}
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div p {
+  font-size: 1vw;
+  line-height: 2vw;
+}
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div p a {
+  color: #e55b7e;
+}
+#page-content #pages .page .card .form-container .upper-form .qr-container .contact-means-container div p a:hover {
+  color: #0a0b24;
 }
 #page-content #pages .page .card .form-container .upper-form .qr-container img {
   max-width: 40%;
@@ -503,7 +532,7 @@ header #swipe-bar {
   width: 20vw;
   filter: sepia(0.1);
   transition: 0.5s;
-  border: 1px solid #cecdcd;
+  border: 1px solid rgb(206, 205, 205);
 }
 #page-content #pages .page .card .tech-polaroids strong {
   font-size: calc(0.8em + 0.8vw);
@@ -532,7 +561,6 @@ header #swipe-bar {
   .mob {
     display: block;
   }
-
   header {
     flex-flow: column nowrap;
     justify-content: flex-end;
@@ -560,7 +588,6 @@ header #swipe-bar {
     width: 20vw;
     transition: all 0.1s ease-out;
   }
-
   #page-content {
     margin-top: calc(1em + 6vw);
   }
@@ -610,14 +637,6 @@ header #swipe-bar {
     font-size: calc(0.6em + 0.5vw);
     font-weight: lighter;
   }
-  #page-content #pages .page .card .form-container .upper-form .qr-container {
-    width: 100%;
-    height: 20vh;
-    border-radius: 0;
-  }
-  #page-content #pages .page .card .form-container .upper-form .qr-container img {
-    max-height: 15vh;
-  }
   #page-content #pages .page .card .form-container .form-footer #socials .fa {
     font-size: calc(1em + 1vw);
   }
@@ -646,7 +665,6 @@ header #swipe-bar {
     padding: calc(0.3em + 0.5vw);
     margin: calc(0.3em + 0.5vw);
   }
-
   .content-change {
     display: none;
   }
@@ -656,7 +674,6 @@ header #swipe-bar {
   .content-change #next-button {
     display: none;
   }
-
   #pages {
     width: 100%;
   }

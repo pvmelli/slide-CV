@@ -265,6 +265,21 @@ header {
                 margin: 2vw 1vw;
             }
 
+            #presentation{
+                i {
+                    font-size: 4vw;
+                }
+                iconify-icon {
+                    font-size: 4vw;
+                }
+            }
+
+            #img-perfil{
+                border-radius: 50%;
+                width: 80%;
+            }
+
+
             .polaroid-container {
 
                 .polaroid {
@@ -478,10 +493,35 @@ header {
                             background-color: #c1f0f1ef;
                             width: 50%;
                             display: flex;
+                            flex-flow: column nowrap;
                             justify-content:  center;
                             align-items: center;
-                            padding: 2vw;
+                            padding: 0vw;
                             border-radius: 0 0.5vw 0 0;
+
+                            .contact-means-container{
+                                i {
+                                    font-size: 2vw;
+                                }
+                                div{
+                                    display:flex;
+                                    flex-flow: row nowrap;
+                                    word-break:break-all;
+                                
+                                    
+                                    p {
+                                        font-size: 1vw;
+                                        line-height: 2vw;
+                                        a {
+                                            color: $pink;
+
+                                            &:hover {
+                                                color: $darkblue;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
 
                             img {
                                 max-width: 40%;
@@ -724,16 +764,6 @@ header {
                                 button {
                                     font-size: calc(0.6em + 0.5vw);
                                     font-weight: lighter;
-                                }
-                            }
-
-                            .qr-container {
-                                width: 100%;
-                                height: 20vh;
-                                border-radius: 0;
-
-                                img {
-                                    max-height: 15vh;
                                 }
                             }
                             
